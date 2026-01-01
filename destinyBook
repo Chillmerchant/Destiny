@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fanfic book based on the entire timeline of Destiny, including key events and lore.">
+    <meta name="keywords" content="Destiny lore, fanfic, Bungie, Light and Dark">
+    <title>Destiny</title>
+    <link rel="stylesheet" href="dB.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangla&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png" alt="Destiny Logo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Destiny: The Powers of the Light and Dark</h1>
+            <p>Embark on a Journey through Destiny lore.</p>
+        </div>
+        <button id="themeToggle" class="nav-button">Toggle Theme</button>
+    </header>
+
+    <nav class="main-nav">
+        <input type="text" id="chapterSearch" placeholder="Search chapters...">
+        <ul>
+            <li><a href="#pre-destiny"><i class="fas fa-book-open"></i> Pre-Destiny Era</a></li>
+            <li><a href="#destiny-1"><i class="fas fa-book-open"></i> Destiny 1 Chapters</a></li>
+            <li><a href="#destiny-2"><i class="fas fa-book-open"></i> Destiny 2 Chapters</a></li>
+            <li><a href="summaryDestiny.html"><i class="fas fa-file-alt"></i> Summary</a></li>
+            <li><a href="galleryDestiny.html"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a id="musicButton" class="nav-button"><i class="fas fa-music"></i> Music</a></li>
+            <li><a id="audiobookButton" class="nav-button"><i class="fas fa-headphones"></i> Audiobook</a></li>
+            <li><a id="userButton" class="nav-button"><i class="fas fa-user"></i> Users</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="pre-destiny">
+            <h2>Pre-Destiny Era</h2>
+            <nav class="chapter-nav">
+                <ul>
+                    <li><a href="chapter1.html" data-chapter="1"><span class="read-mark"></span> Chapter 1: The First Knife</a></li>
+                    <li><a href="chapter2.html" data-chapter="2"><span class="read-mark"></span> Chapter 2: Lubrae's Ruin</a></li>
+                    <li><a href="chapter3.html" data-chapter="3"><span class="read-mark"></span> Chapter 3: Fundament</a></li>
+                    <li><a href="chapter4.html" data-chapter="4"><span class="read-mark"></span> Chapter 4: The Hive</a></li>
+                    <li><a href="chapter5.html" data-chapter="5"><span class="read-mark"></span> Chapter 5: The Fallen</a></li>
+                    <li><a href="chapter6.html" data-chapter="6"><span class="read-mark"></span> Chapter 6: The Cabal</a></li>
+                    <li><a href="chapter7.html" data-chapter="7"><span class="read-mark"></span> Chapter 7: The Golden Age</a></li>
+                    <li><a href="chapter8.html" data-chapter="8"><span class="read-mark"></span> Chapter 8: The Collapse</a></li>
+                    <li><a href="chapter9.html" data-chapter="9"><span class="read-mark"></span> Chapter 9: The Awoken</a></li>
+                    <li><a href="chapter10.html" data-chapter="10"><span class="read-mark"></span> Chapter 10: The Dark Age</a></li>
+                    <li><a href="chapter11.html" data-chapter="11"><span class="read-mark"></span> Chapter 11: The City Age</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="destiny-1">
+            <h2>Destiny 1 Chapters</h2>
+            <nav class="chapter-nav">
+                <ul>
+                    <li><a href="chapter12.html" data-chapter="12"><span class="read-mark"></span> Chapter 12: Awakening (Destiny 1 Vanilla)</a></li>
+                    <li><a href="chapter13.html" data-chapter="13"><span class="read-mark"></span> Chapter 13: The Dark Below</a></li>
+                    <li><a href="chapter14.html" data-chapter="14"><span class="read-mark"></span> Chapter 14: The House of Wolves</a></li>
+                    <li><a href="chapter15.html" data-chapter="15"><span class="read-mark"></span> Chapter 15: The Taken King</a></li>
+                    <li><a href="chapter16.html" data-chapter="16"><span class="read-mark"></span> Chapter 16: Rise of Iron</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="destiny-2">
+            <h2>Destiny 2 Chapters</h2>
+            <nav class="chapter-nav">
+                <ul>
+                    <li><a href="chapter17.html" data-chapter="17"><span class="read-mark"></span> Chapter 17: The Red War (Destiny 2 Vanilla)</a></li>
+                    <li><a href="chapter18.html" data-chapter="18"><span class="read-mark"></span> Chapter 18: The Return of an Exile (Curse of Osiris)</a></li>
+                    <li><a href="chapter19.html" data-chapter="19"><span class="read-mark"></span> Chapter 19: The Warmind & The Worm God (Warmind)</a></li>
+                    <li><a href="chapter20.html" data-chapter="20"><span class="read-mark"></span> Chapter 20: The Forsaken Prince (Forsaken)</a></li>
+                    <li><a href="chapter21.html" data-chapter="21"><span class="read-mark"></span> Chapter 21: Dangerous Allies (Season of the Forge, Season of the Drifter & Season of Opulence)</a></li>
+                    <li><a href="chapter22.html" data-chapter="22"><span class="read-mark"></span> Chapter 22: The Shadow Rises (Shadowkeep)</a></li>
+                    <li><a href="chapter23.html" data-chapter="23"><span class="read-mark"></span> Chapter 23: The Saint (Season of Dawn)</a></li>
+                    <li><a href="chapter24.html" data-chapter="24"><span class="read-mark"></span> Chapter 24: The Warmind's Wrath (Season of the Worthy)</a></li>
+                    <li><a href="chapter25.html" data-chapter="25"><span class="read-mark"></span> Chapter 25: The Arrival (Season of Arrivals)</a></li>
+                    <li><a href="chapter26.html" data-chapter="26"><span class="read-mark"></span> Chapter 26: Between Light & Dark (Beyond Light)</a></li>
+                    <li><a href="chapter27.html" data-chapter="27"><span class="read-mark"></span> Chapter 27: An All Too Familiar Face (Season of the Hunt)</a></li>
+                    <li><a href="chapter28.html" data-chapter="28"><span class="read-mark"></span> Chapter 28: The Empress (Season of the Chosen)</a></li>
+                    <li><a href="chapter29.html" data-chapter="29"><span class="read-mark"></span> Chapter 29: The Splicer (Season of the Splicer)</a></li>
+                    <li><a href="chapter30.html" data-chapter="30"><span class="read-mark"></span> Chapter 30: Monarchs & Memories (Season of the Lost)</a></li>
+                    <li><a href="chapter31.html" data-chapter="31"><span class="read-mark"></span> Chapter 31: The Witch Queen</a></li>
+                    <li><a href="chapter32.html" data-chapter="32"><span class="read-mark"></span> Chapter 32: The Leviathan's Shadow (Season of the Haunted)</a></li>
+                    <li><a href="chapter33.html" data-chapter="33"><span class="read-mark"></span> Chapter 33: The Ship Stealer's Revenge (Season of the Plunder)</a></li>
+                    <li><a href="chapter34.html" data-chapter="34"><span class="read-mark"></span> Chapter 34: The Last Seraphim (Season of the Seraph)</a></li>
+                    <li><a href="chapter35.html" data-chapter="35"><span class="read-mark"></span> Chapter 35: Lightfall</a></li>
+                    <li><a href="chapter36.html" data-chapter="36"><span class="read-mark"></span> Chapter 36: Into The Deep (Season of the Deep)</a></li>
+                    <li><a href="chapter37.html" data-chapter="37"><span class="read-mark"></span> Chapter 37: The God of Vengeance (Season of the Witch)</a></li>
+                    <li><a href="chapter38.html" data-chapter="38"><span class="read-mark"></span> Chapter 38: The 15th Wish (Season of the Wish)</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <p>Destiny 2 themed fan project by Sean Pence.</p>
+    </footer>
+
+    <div id="musicModal" class="modal">
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Music Player</h2>
+            <p>Current Track: <span id="currentTrack">None</span></p>
+            <div class="progress-container">
+                <input type="range" id="progressBar" min="0" value="0">
+                <span id="timeDisplay">0:00 / 0:00</span>
+            </div>
+            <div class="controls">
+                <button id="backTrack">Back</button>
+                <button id="replayTrack">Replay</button>
+                <button id="playPause">Play</button>
+                <button id="skipTrack">Skip</button>
+            </div>
+            <h3>Track List</h3>
+            <ul id="trackList"></ul>
+        </div>
+    </div>
+
+    <div id="audiobookModal" class="modal">
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <span id="closeAudiobook" class="close">&times;</span>
+            <h2>Full Audiobook</h2>
+            <p class="audiobook-note">The complete narrated epic • 7:50:51</p>
+            
+            <audio id="audiobookAudio" controls preload="none" class="styled-audio">
+                <source src="audio/Destiny Audiobook.m4a" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div class="simple-controls controls">
+                <button id="abPlayPause" style="font-size: 1.1em; padding: 10px 20px;">Play</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="userModal" class="modal">
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <span id="closeUserModal" class="close">&times;</span>
+            <h2>User Profiles</h2>
+            <p>Current User: <span id="currentUserDisplay">Guest</span></p>
+            <div class="modal-section">
+                <input type="text" id="newUserInput" placeholder="New user name">
+                <button id="addUserButton">Add User</button>
+            </div>
+            <h3>Select User</h3>
+            <ul id="userList">
+                <li><button class="select-user" data-user="guest">Guest</button></li>
+            </ul>
+            <div class="modal-actions">
+                <button id="deleteAllUsersButton">Delete All Users</button>
+                <button id="resetAllProgressButton">Reset All Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic">
+        <source id="musicSource" src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const tracks = [
+            'audio/1-inner-light.mp3',
+            'audio/2-last-rite.mp3',
+            'audio/3-rise.mp3',
+            'audio/4-edz.mp3',
+            'audio/5-towerfall.mp3',
+            'audio/6-lost-light-feat-kronos-quartet.mp3',
+            'audio/7-forge-ahead.mp3',
+            'audio/8-battle-stations.mp3',
+            'audio/9-utopia-fallen.mp3',
+            'audio/10-lost-sector.mp3',
+            'audio/11-journey-feat-kronos-quartet.mp3',
+            'audio/12-view-from-orbit.mp3',
+            'audio/13-red-legion.mp3',
+            'audio/14-new-dawn.mp3',
+            'audio/15-what-we-fight-for.mp3',
+            'audio/16-leviathan.mp3',
+            'audio/17-the-wilds.mp3',
+            'audio/18-holliday.mp3',
+            'audio/19-the-farm.mp3',
+            'audio/20-be-brave.mp3',
+            'audio/21-payback.mp3',
+            'audio/22-homecoming.mp3',
+            'audio/23-traveler-s-dream.mp3',
+            'audio/24-ikora.mp3',
+            'audio/25-nessus.mp3',
+            'audio/26-the-hunted.mp3',
+            'audio/27-pathfinder.mp3',
+            'audio/28-spark.mp3',
+            'audio/29-scavenger-s-den.mp3',
+            'audio/30-dominus-ghaul.mp3',
+            'audio/31-riptide.mp3',
+            'audio/32-titan.mp3',
+            'audio/33-legion-s-march.mp3',
+            'audio/34-home-of-the-brave.mp3',
+            'audio/35-a-new-frontier.mp3',
+            'audio/36-into-the-light.mp3',
+            'audio/37-voyage.mp3',
+            'audio/38-arcadia.mp3',
+            'audio/39-no-mercy.mp3',
+            'audio/40-the-blight.mp3',
+            'audio/41-guardian-s-sacrifice.mp3',
+            'audio/42-resist-the-legion.mp3',
+            'audio/43-sanctuary.mp3',
+            'audio/44-the-last-city.mp3',
+        ];
+
+        let currentTrackIndex = -1;
+        let hasInteracted = false;
+
+        const musicButton = document.getElementById('musicButton');
+        const musicModal = document.getElementById('musicModal');
+        const closeModal = document.getElementById('closeModal');
+        const currentTrackDisplay = document.getElementById('currentTrack');
+        const progressBar = document.getElementById('progressBar');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const playPause = document.getElementById('playPause');
+        const backTrack = document.getElementById('backTrack');
+        const replayTrack = document.getElementById('replayTrack');
+        const skipTrack = document.getElementById('skipTrack');
+        const trackList = document.getElementById('trackList');
+        const backgroundMusic = document.getElementById('musicSource');
+        const audio = document.getElementById('backgroundMusic');
+
+        tracks.forEach((track, index) => {
+            const li = document.createElement('li');
+            li.textContent = track.replace('audio/', '').replace('.mp3', '');
+            li.addEventListener('click', () => playTrack(index));
+            trackList.appendChild(li);
+        });
+
+        function playTrack(index) {
+            currentTrackIndex = index;
+            backgroundMusic.src = tracks[currentTrackIndex];
+            audio.load();
+            audio.play().catch(error => console.error('Error playing audio:', error));
+            currentTrackDisplay.textContent = tracks[currentTrackIndex].replace('audio/', '').replace('.mp3', '');
+            musicModal.style.display = 'block';
+            updatePlayPauseButton();
+        }
+
+        function playRandomTrack() {
+            if (!hasInteracted) return;
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * tracks.length);
+            } while (newIndex === currentTrackIndex);
+            playTrack(newIndex);
+        }
+
+        function updatePlayPauseButton() {
+            playPause.textContent = audio.paused ? 'Play' : 'Pause';
+        }
+
+        musicButton.addEventListener('click', () => {
+            if (!hasInteracted) {
+                hasInteracted = true;
+                playRandomTrack();
+            }
+            musicModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            musicModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === musicModal) {
+                musicModal.style.display = 'none';
+            }
+        });
+
+        playPause.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play().catch(error => console.error('Error playing audio:', error));
+            } else {
+                audio.pause();
+            }
+            updatePlayPauseButton();
+        });
+
+        skipTrack.addEventListener('click', playRandomTrack);
+        replayTrack.addEventListener('click', () => playTrack(currentTrackIndex));
+        backTrack.addEventListener('click', () => {
+            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+            playTrack(currentTrackIndex);
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100 || 0;
+            progressBar.value = progress;
+            const currentTime = formatTime(audio.currentTime);
+            const duration = formatTime(audio.duration);
+            timeDisplay.textContent = `${currentTime} / ${duration}`;
+        });
+
+        audio.addEventListener('ended', playRandomTrack);
+
+        progressBar.addEventListener('input', () => {
+            const seekTime = (progressBar.value / 100) * audio.duration;
+            audio.currentTime = seekTime;
+        });
+
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        const audiobookButton = document.getElementById('audiobookButton');
+        const audiobookModal = document.getElementById('audiobookModal');
+        const closeAudiobook = document.getElementById('closeAudiobook');
+        const abPlayPause = document.getElementById('abPlayPause');
+        const abAudio = document.getElementById('audiobookAudio');
+
+        audiobookButton.addEventListener('click', () => {
+            audiobookModal.style.display = 'block';
+            abAudio.controls = true;
+        });
+
+        closeAudiobook.addEventListener('click', () => {
+            audiobookModal.style.display = 'none';
+            abAudio.pause();
+            abPlayPause.textContent = 'Play';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === audiobookModal) {
+                audiobookModal.style.display = 'none';
+                abAudio.pause();
+                abPlayPause.textContent = 'Play';
+            }
+        });
+
+        abPlayPause.addEventListener('click', () => {
+            if (abAudio.paused) {
+                abAudio.play().catch(e => console.error('Playback error:', e));
+                abPlayPause.textContent = 'Pause';
+            } else {
+                abAudio.pause();
+                abPlayPause.textContent = 'Play';
+            }
+        });
+
+        abAudio.addEventListener('play', () => {
+            abPlayPause.textContent = 'Pause';
+        });
+
+        abAudio.addEventListener('pause', () => {
+            abPlayPause.textContent = 'Play';
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Chapter search
+        const searchInput = document.getElementById('chapterSearch');
+        const chapterLinks = document.querySelectorAll('.chapter-nav a');
+        searchInput.addEventListener('input', () => {
+            const filter = searchInput.value.toLowerCase();
+            chapterLinks.forEach(link => {
+                link.parentElement.style.display = link.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+            });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            themeToggle.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+        });
+
+        // Section animations
+        window.addEventListener('load', () => {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('visible');
+            });
+            loadProgress(); // Load progress after sections are visible
+            updateUserDisplay(); // Update user display
+        });
+
+        // User management
+        const userButton = document.getElementById('userButton');
+        const userModal = document.getElementById('userModal');
+        const closeUserModal = document.getElementById('closeUserModal');
+        const currentUserDisplay = document.getElementById('currentUserDisplay');
+        const newUserInput = document.getElementById('newUserInput');
+        const addUserButton = document.getElementById('addUserButton');
+        const userList = document.getElementById('userList');
+        const deleteAllUsersButton = document.getElementById('deleteAllUsersButton');
+        const resetAllProgressButton = document.getElementById('resetAllProgressButton');
+
+        userButton.addEventListener('click', () => {
+            populateUserList();
+            userModal.style.display = 'block';
+        });
+
+        closeUserModal.addEventListener('click', () => {
+            userModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === userModal) {
+                userModal.style.display = 'none';
+            }
+        });
+
+        addUserButton.addEventListener('click', () => {
+            const newUser = newUserInput.value.trim();
+            if (newUser) {
+                let users = JSON.parse(localStorage.getItem('users') || '[]');
+                if (!users.includes(newUser)) {
+                    users.push(newUser);
+                    localStorage.setItem('users', JSON.stringify(users));
+                    localStorage.setItem('progress-' + newUser, JSON.stringify([]));
+                    newUserInput.value = '';
+                    populateUserList();
+                }
+            }
+        });
+
+        deleteAllUsersButton.addEventListener('click', () => {
+            if (confirm('Are you sure you want to delete all users (except Guest)?')) {
+                let users = JSON.parse(localStorage.getItem('users') || '[]');
+                users.forEach(user => {
+                    localStorage.removeItem('progress-' + user);
+                });
+                localStorage.removeItem('users');
+                const currentUser = localStorage.getItem('currentUser');
+                if (currentUser !== 'guest') {
+                    localStorage.setItem('currentUser', 'guest');
+                }
+                populateUserList();
+                updateUserDisplay();
+                loadProgress();
+            }
+        });
+
+        resetAllProgressButton.addEventListener('click', () => {
+            if (confirm('Are you sure you want to reset progress for all users?')) {
+                let users = JSON.parse(localStorage.getItem('users') || '[]');
+                users.forEach(user => {
+                    localStorage.setItem('progress-' + user, JSON.stringify([]));
+                });
+                loadProgress();
+            }
+        });
+
+        function populateUserList() {
+            userList.innerHTML = '<li class="user-item"><button class="select-user" data-user="guest"><i class="fas fa-user"></i> Guest</button></li>';
+            let users = JSON.parse(localStorage.getItem('users') || '[]');
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.classList.add('user-item');
+                li.innerHTML = `
+                    <button class="select-user" data-user="${user}"><i class="fas fa-user"></i> ${user}</button>
+                    <button class="edit-user" data-user="${user}"><i class="fas fa-edit"></i></button>
+                    <button class="delete-user" data-user="${user}"><i class="fas fa-trash"></i></button>
+                    <button class="reset-user" data-user="${user}"><i class="fas fa-undo"></i></button>
+                `;
+                userList.appendChild(li);
+            });
+            addEventListenersToButtons();
+        }
+
+        function addEventListenersToButtons() {
+            document.querySelectorAll('.select-user').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const selectedUser = btn.dataset.user;
+                    localStorage.setItem('currentUser', selectedUser);
+                    updateUserDisplay();
+                    loadProgress();
+                    userModal.style.display = 'none';
+                });
+            });
+
+            document.querySelectorAll('.delete-user').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const user = btn.dataset.user;
+                    if (confirm(`Are you sure you want to delete user "${user}"?`)) {
+                        let users = JSON.parse(localStorage.getItem('users') || '[]');
+                        users = users.filter(u => u !== user);
+                        localStorage.setItem('users', JSON.stringify(users));
+                        localStorage.removeItem('progress-' + user);
+                        if (localStorage.getItem('currentUser') === user) {
+                            localStorage.setItem('currentUser', 'guest');
+                        }
+                        populateUserList();
+                        updateUserDisplay();
+                        loadProgress();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.edit-user').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const user = btn.dataset.user;
+                    const li = btn.parentElement;
+                    li.innerHTML = `
+                        <input type="text" class="edit-user-input" value="${user}">
+                        <button class="save-user" data-old-user="${user}"><i class="fas fa-save"></i></button>
+                        <button class="cancel-edit"><i class="fas fa-times"></i></button>
+                    `;
+                    addEditListeners(li);
+                });
+            });
+
+            document.querySelectorAll('.reset-user').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const user = btn.dataset.user;
+                    if (confirm(`Are you sure you want to reset progress for "${user}"?`)) {
+                        localStorage.setItem('progress-' + user, JSON.stringify([]));
+                        loadProgress();
+                    }
+                });
+            });
+        }
+
+        function addEditListeners(li) {
+            const saveBtn = li.querySelector('.save-user');
+            const cancelBtn = li.querySelector('.cancel-edit');
+            const input = li.querySelector('.edit-user-input');
+
+            saveBtn.addEventListener('click', () => {
+                const oldUser = saveBtn.dataset.oldUser;
+                const newUser = input.value.trim();
+                if (newUser && newUser !== oldUser) {
+                    let users = JSON.parse(localStorage.getItem('users') || '[]');
+                    if (!users.includes(newUser)) {
+                        users = users.map(u => u === oldUser ? newUser : u);
+                        localStorage.setItem('users', JSON.stringify(users));
+                        const progress = JSON.parse(localStorage.getItem('progress-' + oldUser) || '[]');
+                        localStorage.setItem('progress-' + newUser, JSON.stringify(progress));
+                        localStorage.removeItem('progress-' + oldUser);
+                        if (localStorage.getItem('currentUser') === oldUser) {
+                            localStorage.setItem('currentUser', newUser);
+                        }
+                        populateUserList();
+                        updateUserDisplay();
+                        loadProgress();
+                    }
+                } else {
+                    populateUserList();
+                }
+            });
+
+            cancelBtn.addEventListener('click', () => {
+                populateUserList();
+            });
+        }
+
+        function updateUserDisplay() {
+            const currentUser = localStorage.getItem('currentUser') || 'guest';
+            currentUserDisplay.textContent = currentUser.charAt(0).toUpperCase() + currentUser.slice(1);
+            userButton.textContent = currentUser.charAt(0).toUpperCase() + currentUser.slice(1);
+        }
+
+        function loadProgress() {
+            const currentUser = localStorage.getItem('currentUser') || 'guest';
+            document.querySelectorAll('.chapter-nav li').forEach(li => li.classList.remove('read'));
+            if (currentUser !== 'guest') {
+                let progress = JSON.parse(localStorage.getItem('progress-' + currentUser) || '[]');
+                document.querySelectorAll('.chapter-nav a[data-chapter]').forEach(link => {
+                    const chapterId = parseInt(link.dataset.chapter);
+                    if (progress.includes(chapterId)) {
+                        link.parentElement.classList.add('read');
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
