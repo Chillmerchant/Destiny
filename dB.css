@@ -1,0 +1,554 @@
+:root {
+    --background: #0d0d0d;
+    --text-color: #f1f1f1;
+    --header-text: #f7d664;
+    --nav-bg: #1a1a1a;
+    --link-color: #5a92f5;
+    --link-hover: #2673e6;
+    --box-bg: #1e1e1e;
+    --box-border: #333;
+    --footer-bg: #141414;
+    --modal-bg: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    --modal-border: #444;
+    --accent-color: #f7d664;
+
+    --light-background: #f1f1f1;
+    --light-text-color: #0d0d0d;
+    --light-header-text: #b38600;
+    --light-nav-bg: #e0e0e0;
+    --light-link-color: #2673e6;
+    --light-link-hover: #5a92f5;
+    --light-box-bg: #ffffff;
+    --light-box-border: #ccc;
+    --light-footer-bg: #d9d9d9;
+    --light-modal-bg: linear-gradient(135deg, #ffffff, #f1f1f1);
+    --light-modal-border: #bbb;
+    --light-accent-color: #b38600;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+body.light-mode {
+    --background: var(--light-background);
+    --text-color: var(--light-text-color);
+    --header-text: var(--light-header-text);
+    --nav-bg: var(--light-nav-bg);
+    --link-color: var(--light-link-color);
+    --link-hover: var(--light-link-hover);
+    --box-bg: var(--light-box-bg);
+    --box-border: var(--light-box-border);
+    --footer-bg: var(--light-footer-bg);
+    --modal-bg: var(--light-modal-bg);
+    --modal-border: var(--light-modal-border);
+    --accent-color: var(--light-accent-color);
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://www.blueberries.gg/wp-content/uploads/2023/04/S19-Community-Wallpapers-Destiny-2-3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    box-shadow: inset 0 -100px 100px -20px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-family: 'Bangla', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+    color: var(--header-text);
+}
+
+header p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav, .chapter-nav {
+    background: linear-gradient(
+        180deg,
+        var(--nav-bg) 0%,
+        var(--box-bg) 100%
+    );
+    padding: 10px;
+    text-align: center;
+}
+
+.main-nav ul, .chapter-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-nav li, .chapter-nav li {
+    margin: 15px;
+}
+
+.main-nav a, .chapter-nav a {
+    text-decoration: none;
+    color: var(--link-color);
+    padding: 10px 20px;
+    border: 1px solid var(--link-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.main-nav a:hover, .chapter-nav a:hover {
+    background-color: var(--link-hover);
+    color: var(--text-color);
+    border-color: var(--link-hover);
+    transform: scale(1.03);
+    box-shadow: 0 0 10px var(--link-hover);
+}
+
+.nav-button {
+    background: none;
+    border: 1px solid var(--link-color);
+    color: var(--link-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--link-hover);
+    color: var(--text-color);
+    border-color: var(--link-hover);
+    transform: scale(1.03);
+    box-shadow: 0 0 10px var(--link-hover);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background: var(--box-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--box-border);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: var(--header-text);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--box-border);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: var(--modal-bg);
+    margin: 10% auto;
+    padding: 25px;
+    border: 2px solid var(--modal-border);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: var(--text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.modal h2 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.progress-container {
+    margin: 15px 0;
+    padding: 10px;
+    background: var(--box-bg);
+    border-radius: 6px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#progressBar {
+    width: 100%;
+    height: 8px;
+    margin-bottom: 5px;
+    -webkit-appearance: none;
+    background: #333;
+    border-radius: 4px;
+    outline: none;
+}
+
+#progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#progressBar::-webkit-slider-thumb:hover {
+    background: var(--link-hover);
+}
+
+#timeDisplay {
+    font-size: 0.9em;
+    color: #bbb;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.controls button {
+    background: linear-gradient(45deg, var(--box-bg), #2d2d2d);
+    border: 1px solid var(--modal-border);
+    color: var(--link-color);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.controls button:hover {
+    background: var(--link-hover);
+    color: var(--text-color);
+    border-color: var(--link-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#trackList {
+    list-style-type: none;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    background: var(--box-bg);
+    border-radius: 6px;
+    border: 1px solid var(--modal-border);
+    margin-top: 15px;
+}
+
+#trackList li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#trackList li:hover {
+    background: var(--nav-bg);
+    color: var(--accent-color);
+}
+
+#trackList li:active {
+    background: var(--link-hover);
+    color: var(--text-color);
+}
+
+.styled-audio {
+    width: 100%;
+    max-width: 600px;
+    margin: 25px auto;
+    display: block;
+    height: 50px;
+}
+
+.styled-audio::-webkit-media-controls-panel {
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.styled-audio::-webkit-media-controls-play-button,
+.styled-audio::-webkit-media-controls-volume-slider-container,
+.styled-audio::-webkit-media-controls-timeline-container {
+    filter: brightness(1.2);
+}
+
+.styled-audio::-webkit-media-controls-timeline {
+    height: 10px;
+    border-radius: 5px;
+    background: #333;
+    margin: 0 10px;
+}
+
+.styled-audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
+    background: var(--accent-color);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.styled-audio::-webkit-media-controls-current-time-display,
+.styled-audio::-webkit-media-controls-time-remaining-display {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.styled-audio::-moz-media-controls-timeline {
+    height: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.styled-audio::-moz-media-controls-current-time-display,
+.styled-audio::-moz-media-controls-time-remaining-display {
+    color: var(--accent-color)
+}
+
+#audiobookModal .modal-content {
+    max-width: 750px;
+    text-align: center;
+    padding: 10px;
+}
+
+.audiobook-note {
+    font-style: italic;
+    color: #ccc;
+    margin: 15px 0 25px;
+    font-size: 1.1em;
+}
+
+.simple-controls {
+    margin: 25px 0;
+}
+
+#chapterSearch {
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    max-width: 300px;
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+.main-nav a i, .chapter-nav a i {
+    margin-right: 8px;
+}
+
+.read-mark::before {
+    content: '\f058'; /* Font Awesome check circle */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--accent-color);
+    margin-right: 5px;
+    display: none;
+}
+
+.read .read-mark::before {
+    display: inline;
+}
+
+.social-share a {
+    margin: 0 10px;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.social-share a:hover {
+    color: var(--link-hover);
+}
+
+@media (max-width: 768px) {
+    .main-nav ul, .chapter-nav ul {
+        flex-direction: column;
+    }
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+#newUserInput {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+#addUserButton {
+    background: linear-gradient(45deg, var(--box-bg), #2d2d2d);
+    border: 1px solid var(--modal-border);
+    color: var(--link-color);
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#addUserButton:hover {
+    background: var(--link-hover);
+    color: var(--text-color);
+    border-color: var(--link-hover);
+}
+
+#userList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#userList li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--box-bg);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--box-border);
+}
+
+.select-user, .edit-user, .delete-user, .save-user, .cancel-edit, .reset-user {
+    background: linear-gradient(45deg, var(--box-bg), #2d2d2d);
+    border: 1px solid var(--modal-border);
+    color: var(--link-color);
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.select-user:hover, .edit-user:hover, .delete-user:hover, .save-user:hover, .cancel-edit:hover, .reset-user:hover {
+    background: var(--link-hover);
+    color: var(--text-color);
+    border-color: var(--link-hover);
+}
+
+.edit-user-input {
+    padding: 8px;
+    flex: 1;
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+#deleteAllUsersButton, #resetAllProgressButton {
+    background: linear-gradient(45deg, #2d2d2d, var(--box-bg));
+    border: 1px solid var(--modal-border);
+    color: #ff4d4d;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#deleteAllUsersButton:hover, #resetAllProgressButton:hover {
+    background: #ff4d4d;
+    color: var(--text-color);
+    border-color: #ff4d4d;
+}
+
+.modal-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
