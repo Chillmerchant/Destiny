@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 3 Gallery - Destiny Unveiled</title>
+    <link rel="stylesheet" href="galleryDestiny.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangla&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Chapter 3 Gallery</h1>
+        <nav>
+            <a href="galleryDestiny.html">Main Gallery</a> |
+            <a href="chapter3.html">Read Chapter 3</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <figure class="gallery-item">
+                <img src="fundamentPlanet.jpg" alt="Fundament.">
+                <figcaption>Fundament.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="rhulkPhase1.jpg" alt="Rhulk.">
+                <figcaption>Rhulk.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="theWitness.jpg" alt="The Witness.">
+                <figcaption>The Witness.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="hiveGodsAndTraveler.png" alt="The Hive Gods looking up at the Traveler.">
+                <figcaption>The Hive Gods looking up at the Traveler.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Ahsa.png" alt="Ahsa.">
+                <figcaption>Ahsa.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Xita.jpg" alt="Xita.">
+                <figcaption>Xita.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Xol.jpg" alt="Xol, Will of the Thousands.">
+                <figcaption>Xol, Will of the Thousands.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Akka.jpg" alt="Akka, the Worm of Secrets.">
+                <figcaption>Akka, the Worm of Secrets.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Leviathan'sRib.png" alt="Leviathan's Rib.">
+                <figcaption>Leviathan's Rib.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Aurash.jpg" alt="Aurash.">
+                <figcaption>Aurash.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Sathona.jpg" alt="Sathona.">
+                <figcaption>Sathona.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="XiRo.jpg" alt="Xi Ro.">
+                <figcaption>Xi Ro.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="OryxTheNavigator.jpg" alt="Oryx the Navigator.">
+                <figcaption>Oryx the Navigator.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Savathun.jpg" alt="Savathûn, the Queen of Lies and Deception.">
+                <figcaption>Savathûn, the Queen of Lies and Deception.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="XivuArathGodofWar.jpg" alt="Xivu Arath, the God of War.">
+                <figcaption>Xivu Arath, the God of War.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Sol.jpg" alt="Sol.">
+                <figcaption>Sol.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="AsendantPlane.jpg" alt="The Asendant Plane.">
+                <figcaption>The Asendant Plane.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="SwordLogic.jpg" alt="The Sword Logic.">
+                <figcaption>The Sword Logic.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="WormLarva.png" alt="Worm Larva.">
+                <figcaption>Worm Larva.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="WormGods.png" alt="The Worm Gods.">
+                <figcaption>The Worm Gods.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Hive.jpg" alt="The Hive.">
+                <figcaption>The Hive.</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Sean Pence | Destiny 2 Fan Project</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const captionText = document.getElementById('caption');
+        const closeBtn = document.querySelector('.close');
+
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                lightbox.style.display = 'block';
+                lightboxImg.src = this.src;
+                captionText.innerHTML = this.nextElementSibling.innerText;
+            });
+        });
+
+        closeBtn.addEventListener('click', function() {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', function(event) {
+            if (event.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

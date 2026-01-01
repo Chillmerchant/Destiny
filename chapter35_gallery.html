@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 2 Gallery - Destiny Unveiled</title>
+    <link rel="stylesheet" href="galleryDestiny.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangla&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Chapter 2 Gallery</h1>
+        <nav>
+            <a href="galleryDestiny.html">Main Gallery</a> |
+            <a href="chapter2.html">Read Chapter 2</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <figure class="gallery-item">
+                <img src="fundamentPlanet.jpg" alt="Fundament.">
+                <figcaption>Fundament.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="rhulkPhase2.png" alt="Lubraean.">
+                <figcaption>Lubraean.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="Rhulk.jpg" alt="Rhulk.">
+                <figcaption>Rhulk.</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="lubrae'sRuinGlaive.png" alt="Rhulk's Glaive, Lubrae's Ruin.">
+                <figcaption>Rhulk's Glaive, "Lubrae's Ruin."</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Sean Pence | Destiny 2 Fan Project</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const captionText = document.getElementById('caption');
+        const closeBtn = document.querySelector('.close');
+
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function() {
+                lightbox.style.display = 'block';
+                lightboxImg.src = this.src;
+                captionText.innerHTML = this.nextElementSibling.innerText;
+            });
+        });
+
+        closeBtn.addEventListener('click', function() {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', function(event) {
+            if (event.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
