@@ -6,11 +6,48 @@
     <meta name="description" content="Fanfic book based on the entire timeline of Destiny, including key events and lore.">
     <meta name="keywords" content="Destiny lore, fanfic, Bungie, Light and Dark">
     <title>Destiny</title>
+
+    <!-- Performance: Preconnect to external origins for faster font & icon loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload critical CSS for faster rendering -->
+    <link rel="preload" href="dB.css" as="style">
     <link rel="stylesheet" href="dB.css">
+
+    <!-- Optimized Google Fonts (display=swap prevents invisible text) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bangla&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/favicon.png" alt="Destiny Logo">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Internal styles for modal buttons (extracted from inline for cleaner HTML & smaller size) -->
+    <style>
+        .audiobook-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+            color: #fff;
+            padding: 18px 42px;
+            font-size: 1.25em;
+            font-weight: 600;
+            border-radius: 14px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0, 120, 212, 0.45);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .audiobook-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 120, 212, 0.55);
+        }
+        .audiobook-btn i {
+            font-size: 1.4em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -129,14 +166,17 @@
             <h2>Full Audiobook</h2>
             <p class="audiobook-note">The complete narrated epic • 7:50:51</p>
             
-            <audio id="audiobookAudio" controls preload="none" class="styled-audio">
-                <source src="chapterAudio/Destiny Audiobook.m4a" type="audio/mp4">
-                Your browser does not support the audio element.
-            </audio>
+            <a href="https://onedrive.live.com/?id=%2Fpersonal%2F3d60413bdee64f76%2FDocuments%2Fdrives%2F3D60413BDEE64F76%2FBundles_b896e2bb7ca3447691823a44c4ad6ad7%2FItems%20Shared%20on%203-29-2026%201&viewid=526f1a22-7d0f-45b0-88fa-5e54f40d8336&view=0" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="audiobook-btn">
+                <i class="fas fa-headphones"></i>
+                <span>Play Full Audiobook</span>
+            </a>
 
-            <div class="simple-controls controls">
-                <button id="abPlayPause" style="font-size: 1.1em; padding: 10px 20px;">Play</button>
-            </div>
+            <p style="margin-top: 28px; padding: 10px 20px; font-size: 0.9em; color: #777;">
+                Opens in a new tab • High-quality streaming from OneDrive
+            </p>
         </div>
     </div>
 
@@ -319,44 +359,19 @@
         const audiobookButton = document.getElementById('audiobookButton');
         const audiobookModal = document.getElementById('audiobookModal');
         const closeAudiobook = document.getElementById('closeAudiobook');
-        const abPlayPause = document.getElementById('abPlayPause');
-        const abAudio = document.getElementById('audiobookAudio');
 
         audiobookButton.addEventListener('click', () => {
             audiobookModal.style.display = 'block';
-            abAudio.controls = true;
         });
 
         closeAudiobook.addEventListener('click', () => {
             audiobookModal.style.display = 'none';
-            abAudio.pause();
-            abPlayPause.textContent = 'Play';
         });
 
         window.addEventListener('click', (event) => {
             if (event.target === audiobookModal) {
                 audiobookModal.style.display = 'none';
-                abAudio.pause();
-                abPlayPause.textContent = 'Play';
             }
-        });
-
-        abPlayPause.addEventListener('click', () => {
-            if (abAudio.paused) {
-                abAudio.play().catch(e => console.error('Playback error:', e));
-                abPlayPause.textContent = 'Pause';
-            } else {
-                abAudio.pause();
-                abPlayPause.textContent = 'Play';
-            }
-        });
-
-        abAudio.addEventListener('play', () => {
-            abPlayPause.textContent = 'Pause';
-        });
-
-        abAudio.addEventListener('pause', () => {
-            abPlayPause.textContent = 'Play';
         });
 
         // Smooth scrolling
@@ -386,8 +401,8 @@
             themeToggle.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
         });
 
-        // Section animations
-        window.addEventListener('load', () => {
+        // Section animations - use DOMContentLoaded for faster perceived load (runs as soon as HTML is parsed)
+        window.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('section').forEach(section => {
                 section.classList.add('visible');
             });
