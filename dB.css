@@ -154,6 +154,9 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Performance: Skip rendering offscreen sections until scrolled into view (faster initial load & interaction on long pages) */
+    content-visibility: auto;
+    contain-intrinsic-size: 400px; /* Estimated height to avoid layout shift */
 }
 
 section.visible {
@@ -450,6 +453,10 @@ footer {
         width: 95%;
         margin: 5% auto;
     }
+    /* Performance on mobile: fixed backgrounds are expensive; switch to scroll to reduce paint cost */
+    header {
+        background-attachment: scroll;
+    }
 }
 
 #newUserInput {
@@ -551,4 +558,30 @@ footer {
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
+}
+
+/* Audiobook button styles (moved from inline HTML for better maintainability & caching) */
+.audiobook-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+    color: #fff;
+    padding: 18px 42px;
+    font-size: 1.25em;
+    font-weight: 600;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0, 120, 212, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.audiobook-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 120, 212, 0.55);
+}
+
+.audiobook-btn i {
+    font-size: 1.4em;
 }
